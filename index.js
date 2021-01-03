@@ -115,7 +115,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '⌛ Aguarde um pouco... O servidor do sapo é uma merda ⌛',
+				wait: '⌛ Aguarde um pouco... O servidor do GS é uma merda ⌛',
 				success: '✔️ Deu certo ✔️',
 				error: {
 					stick: '❌ Falha, ocorreu um erro ao converter a imagem em figurinha ❌',
@@ -124,7 +124,7 @@ async function starts() {
 				only: {
 					group: '❌ Este comando só pode ser usado em grupos! ❌',
 					ownerG: '❌ Este comando só pode ser usado pelo proprietário do grupo! ❌',
-					ownerB: '❌ Este comando só pode ser usado pelo sapo! ❌',
+					ownerB: '❌ Este comando só pode ser usado pelo GS! ❌',
 					admin: '❌ Burrão tu não é adm! ❌',
 					Badmin: '❌ Este comando só pode ser usado quando o bot se torna administrador! ❌'
 				}
@@ -311,7 +311,7 @@ async function starts() {
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 600
-					? reply('Muito grande, parece até o pau do Cleyton')
+					? reply('Muito grande, parece até o pau do GS')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
@@ -452,7 +452,7 @@ async function starts() {
 					mentions(teks, members_id, true)
 					break
 				case 'clearall':
-					if (!isOwner) return reply('Sapo me disse pra não fazer isso')
+					if (!isOwner) return reply('GS me disse pra não fazer isso')
 					anu = await client.chats.all()
 					client.setMaxListeners(25)
 					for (let _ of anu) {
@@ -499,7 +499,7 @@ async function starts() {
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Já recebi seu pedido bb, aguarde o servidor do sapo é uma bosta :\n'
+						teks = 'Já recebi seu pedido bb, aguarde o servidor do GS é uma bosta :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
